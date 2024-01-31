@@ -34,6 +34,7 @@ const resolvers = {
   },
 
   Mutation: {
+
     createUser: (parent, args) => {
       const user = args.input;
       const lastId = UserList[UserList.length -1].id;
@@ -41,6 +42,7 @@ const resolvers = {
       UserList.push(user);
       return user;
     },
+
     updateUsername: (parent, args) => {
       const { id, username } = args.input;
       let updatedUser;
@@ -51,6 +53,12 @@ const resolvers = {
         }
       })
       return updatedUser;
+    },
+
+    deleteUser: (parent, args) => {
+      const id = args.id;
+      _.remove(UserList, (user) => user.id === Number(id))
+      return null;
     }
   }
 };
