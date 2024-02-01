@@ -45,16 +45,16 @@ const typeDefs = gql`
   }
 
   enum Nationality {
-    American
-    British
-    Canadian
-    Australian
-    Indian
-    German
-    French
-    Italian
-    Spanish
-    Japanese
+    AMERICAN 
+    BRITISH 
+    CANADIAN 
+    AUSTRALIAN 
+    INDIAN 
+    GERMAN 
+    FRENCH 
+    ITALIAN 
+    SPANISH 
+    JAPANESE
   }
 
 `;
